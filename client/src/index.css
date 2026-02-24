@@ -1,0 +1,215 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-brand-dark: #0B1C2D;
+  --color-brand-neon: #00d2ff;
+  --color-brand-gold: #ffd700;
+  --color-brand-gold-dark: #b8860b;
+
+  --font-sans: 'Poppins', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+:root {
+  --background: 210 60% 11%;
+  --foreground: 0 0% 100%;
+  --card: 210 50% 15%;
+  --card-foreground: 0 0% 100%;
+  --popover: 210 50% 15%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 191 100% 50%;
+  --primary-foreground: 210 60% 11%;
+  --secondary: 51 100% 50%;
+  --secondary-foreground: 210 60% 11%;
+  --muted: 210 40% 20%;
+  --muted-foreground: 210 20% 70%;
+  --accent: 191 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 40% 20%;
+  --input: 210 40% 20%;
+  --ring: 191 100% 50%;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: 210 60% 8%; /* #0B1C2D equivalent */
+  --foreground: 0 0% 100%;
+  --card: 210 50% 12%;
+  --card-foreground: 0 0% 100%;
+  --popover: 210 50% 12%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 191 100% 50%;
+  --primary-foreground: 210 60% 11%;
+  --secondary: 51 100% 50%;
+  --secondary-foreground: 210 60% 11%;
+  --muted: 210 40% 20%;
+  --muted-foreground: 210 20% 70%;
+  --accent: 191 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 40% 20%;
+  --input: 210 40% 20%;
+  --ring: 191 100% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
+    background: radial-gradient(circle at top, #1a365d 0%, #0B1C2D 100%);
+  }
+}
+
+/* Custom Styles for Vitor Surf */
+
+.glass-button {
+  background: #000000;
+  border: 2px solid #8ccee1;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-button:hover {
+  background: #00d2ff;
+  transform: translateY(-4px);
+  box-shadow: 
+    0 8px 25px rgba(0, 210, 255, 0.4);
+  border-color: #00d2ff;
+}
+
+.text-brand-blue {
+  color: #00d2ff;
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.6);
+}
+
+.text-neon-glow {
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.8), 0 0 20px rgba(0, 210, 255, 0.4);
+}
+
+.logo-container {
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.5), 0 0 60px rgba(0, 210, 255, 0.2);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Ocean Waves Animation */
+.ocean {
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.wave {
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" fill="rgba(0, 210, 255, 0.2)" opacity=".5"/></svg>') repeat-x;
+  position: absolute;
+  bottom: 0;
+  width: 6400px;
+  height: 120px;
+  animation: wave 15s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  filter: drop-shadow(0 -5px 15px rgba(0, 210, 255, 0.5));
+}
+
+.wave:nth-of-type(2) {
+  bottom: -10px;
+  animation: wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" fill="rgba(0, 210, 255, 0.4)"/></svg>') repeat-x;
+}
+
+@keyframes wave {
+  0% { margin-left: 0; }
+  100% { margin-left: -1600px; }
+}
+
+@keyframes swell {
+  0%, 100% { transform: translate3d(0,-10px,0); }
+  50% { transform: translate3d(0,5px,0); }
+}
+
+/* Overlay mais claro e gradiente suave */
+.overlay-v2 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: -1;
+}
+
+/* 🌊 Onda mais leve e simplificada */
+.wave-v2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 120px;
+  background: linear-gradient(to top, rgba(0, 150, 255, 0.3), transparent);
+  animation: waveMoveV2 8s linear infinite;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes waveMoveV2 {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.particle {
+  position: absolute;
+  background: var(--color-brand-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-brand-gold), 0 0 20px var(--color-brand-gold);
+  animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0.5) translateY(0); }
+  50% { opacity: 1; transform: scale(1) translateY(-20px); }
+  100% { opacity: 0; transform: scale(0.5) translateY(-40px); }
+}

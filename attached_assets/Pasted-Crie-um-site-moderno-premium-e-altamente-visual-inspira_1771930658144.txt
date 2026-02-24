@@ -1,0 +1,133 @@
+Crie um site moderno, premium e altamente visual inspirado em uma landing page de moda masculina chamada Vitor Surf – Moda Masculina.
+
+O site deve ser visualmente impactante, luxuoso e com aparência 3D, usando tons de azul escuro, azul neon e dourado brilhante.
+
+🎨 ESTILO VISUAL
+
+Tema: Moda masculina premium
+
+Cores principais:
+
+Azul escuro (#0B1C2D)
+
+Azul neon brilhante
+
+Dourado metálico com brilho
+
+Fundo com efeito oceânico (ondas suaves em azul neon na parte inferior)
+
+Partículas de brilho dourado espalhadas no fundo
+
+Efeito glow nas bordas
+
+Visual futurista, tecnológico e sofisticado
+
+Botões com efeito vidro (glassmorphism) + brilho neon nas bordas
+
+Sombras suaves e profundidade 3D
+
+🧱 ESTRUTURA DO SITE
+🔹 Header centralizado com logo
+
+Logo circular
+
+Texto: "Vitor Surf"
+
+Subtítulo: "Moda Masculina"
+
+Frase abaixo: "Produtos 100% Originais"
+
+🔹 Seção principal com 5 botões grandes estilizados:
+
+Criar botões largos, arredondados, com:
+
+Fundo azul escuro com degradê
+
+Borda dourada brilhante
+
+Efeito glow ao passar o mouse
+
+Animação suave hover (levantar levemente + brilho)
+
+Botões:
+
+🌐 SITE
+
+📱 WHATSAPP
+
+👑 GRUPO VIP
+
+📍 ENDEREÇO
+
+🎵 TIK TOK
+
+Cada botão deve ter:
+
+Ícone à esquerda
+
+Texto grande em dourado com leve sombra
+
+Efeito de iluminação interna
+
+✨ ANIMAÇÕES
+
+Fade-in suave ao carregar a página
+
+Efeito hover animado nos botões
+
+Pequeno efeito de brilho se movendo sobre os botões
+
+Animação suave nas ondas do fundo (CSS animation)
+
+📱 RESPONSIVIDADE
+
+Totalmente responsivo
+
+Perfeito para celular
+
+Botões ocupando quase toda largura no mobile
+
+Layout centralizado
+
+💻 TECNOLOGIAS
+
+Use:
+
+HTML5
+
+CSS3 moderno (com animações)
+
+JavaScript para interações
+
+Pode usar Tailwind ou CSS puro
+
+Estrutura organizada
+
+Código limpo e comentado
+
+🎯 DIFERENCIAL
+
+Adicionar:
+
+Fundo com efeito de ondas animadas em SVG
+
+Pequeno efeito de partículas brilhantes
+
+Gradientes suaves
+
+Transições profissionais
+
+Aparência de landing page de alto padrão
+
+📦 ENTREGA
+
+Gerar:
+
+index.html
+
+style.css
+
+script.js
+
+Separar os arquivos corretamente.
+Código organizado e pronto para rodar.

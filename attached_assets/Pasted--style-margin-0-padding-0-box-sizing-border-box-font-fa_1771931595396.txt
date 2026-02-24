@@ -1,0 +1,101 @@
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("sua-imagem.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay mais claro */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.25) 0%,
+        rgba(0,0,0,0.45) 50%,
+        rgba(0,0,0,0.6) 100%
+    );
+    z-index: 0;
+}
+
+/* Container */
+.container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #FFD700;
+    font-size: 32px;
+    text-shadow: 0 0 8px rgba(255,215,0,0.6);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* Botões */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 18px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+    background: linear-gradient(145deg, #0f2a44, #164c75);
+    border: 2px solid #FFD700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255,215,0,0.5);
+}
+
+/* 🌊 Onda mais leve */
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to top, rgba(0,150,255,0.5), transparent);
+    animation: waveMove 8s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes waveMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50px); }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll; /* melhora performance no celular */
+    }
+}
+</style>

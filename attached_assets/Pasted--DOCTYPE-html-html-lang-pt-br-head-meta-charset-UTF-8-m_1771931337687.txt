@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitor Surf - Moda Masculina</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("sua-imagem.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Camada escura para destacar botões */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 80%);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #FFD700;
+    font-size: 32px;
+    text-shadow: 0 0 10px #FFD700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* Botões */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 18px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+    background: linear-gradient(145deg, #0B1C2D, #123B5E);
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 15px rgba(255,215,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.btn span {
+    font-size: 22px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #FFD700;
+    background: linear-gradient(145deg, #123B5E, #0B1C2D);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+    .btn {
+        font-size: 18px;
+        padding: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+    <h1>Vitor Surf</h1>
+    <div class="subtitle">MODA MASCULINA • PRODUTOS 100% ORIGINAIS</div>
+
+    <a href="https://vitorsurf.lojavirtualnuvem.com.br/" class="btn" target="_blank">
+        <span>🌐</span> SITE
+    </a>
+
+    <a href="https://wa.me/message/QU7T6N2U5HV5D1" class="btn" target="_blank">
+        <span>📲</span> WHATSAPP
+    </a>
+
+    <a href="https://chat.whatsapp.com/KjalVf0t9Ep5rOAoRWLpei?mode=gi_t" class="btn" target="_blank">
+        <span>👑</span> GRUPO VIP
+    </a>
+
+    <a href="https://share.google/ntGR2jecLlyYc4C4o" class="btn" target="_blank">
+        <span>📍</span> ENDEREÇO
+    </a>
+
+    <a href="https://www.tiktok.com/@vitor.surf.loja?_r=1&_t=ZS-94AtUn0tOIn" class="btn" target="_blank">
+        <span>🎵</span> TIKTOK
+    </a>
+
+</div>
+
+</body>
+</html>
